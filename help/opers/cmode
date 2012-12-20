@@ -3,32 +3,33 @@ MODE <channel> <+|-><modes> [parameters]
 CHANNELMODE - DESCRIPTION
 ------------------------------------------------------------------------
 NO PARAMETERS:
-     +n     - No external messages.  Only channel members may talk in
-              the channel.
-     +t     - Ops Topic.  Only opped (+o) users may set the topic.
-     +s     - Secret.  Channel will not be shown in /whois and /list etc.
-     +p     - Private.  Disables /knock to the channel.
-     +m     - Moderated.  Only opped/voiced users may talk in channel.
-     +i     - Invite only.  Users need to be /invite'd or match a +I to
-              join the channel.
-     +r     - Registered users only.  Only users identified to services
-              may join.
-     +c     - No color.  All markup (color, bold, underline, etc.) in
-              messages is stripped.
+     +c     - No color.  All color codes in messages are stripped.
      +g     - Free invite.  Everyone may invite users.  Significantly
               weakens +i control.
+     +i     - Invite only.  Users need to be /invite'd or match a +I to
+              join the channel.
+     +m     - Moderated.  Only opped/voiced users may talk in channel.
+     +n     - No external messages.  Only channel members may talk in
+              the channel.
+     +p     - Private.  Disables /knock to the channel.
+     +s     - Secret.  Channel will not be shown in /whois and /list etc.
+     +t     - Ops Topic.  Only opped (+o) users may set the topic.
+     +r     - Registered users only.  Only users identified to services
+              may join.
      +z     - Op moderated.  Messages blocked by +m, +b and +q are instead
-              sent to ops.
-     +L     - Large ban list.  Increase maximum number of +beIq entries.
-              Only settable by opers.
-     +P     - Permanent.  Channel does not disappear when empty.  Only
-              settable by opers.
-     +F     - Free target.  Anyone may set forwards to this (otherwise
-              ops are necessary).
-     +Q     - Disable forward.  Users cannot be forwarded to the channel
-              (however, new forwards can still be set subject to +F).
+              sent to opped users.
      +C     - Disable CTCP. All CTCP messages to the channel, except ACTION,
               are disallowed.
+     +F     - Free target.  Anyone may set forwards to this (otherwise
+              ops are necessary).
+     +L     - Large ban list.  Increase maximum number of +beIq entries.
+              Only settable by opers.
+     +O     - Oper-only.  Only IRCops may join.
+     +P     - Permanent.  Channel does not disappear when empty.  Only
+              settable by opers.
+     +Q     - Disable forward.  Users cannot be forwarded to the channel
+              (however, new forwards can still be set subject to +F).
+     +S     - SSL-only.  Only users connected via SSL may join.
 
 WITH PARAMETERS:
      +f     - Forward.  Forwards users who cannot join because of +i,
